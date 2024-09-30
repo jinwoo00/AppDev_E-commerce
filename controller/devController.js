@@ -8,6 +8,9 @@ const web ={
     cart:(req, res)=>{
         res.render('cart');
     },
+    about:(req, res)=>{
+        res.render('about');
+    },
     contact:(req, res)=>{
         res.render('contact');
     }
