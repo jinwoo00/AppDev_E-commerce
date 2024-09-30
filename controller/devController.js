@@ -4,6 +4,9 @@ const web ={
     },
     app:(req, res)=>{
         res.render('checkout');
+    },
+    app:(req, res)=>{
+        res.render('about');
     }
     // login: (req, res) => {
     //     res.render('login');
