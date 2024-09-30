@@ -2,8 +2,14 @@ const web ={
     app:(req, res)=>{
         res.render('home');
     },
-    app:(req, res)=>{
+    checkout:(req, res)=>{
         res.render('checkout');
+    },
+    cart:(req, res)=>{
+        res.render('cart');
+    },
+    contact:(req, res)=>{
+        res.render('contact');
     }
     // login: (req, res) => {
     //     res.render('login');
