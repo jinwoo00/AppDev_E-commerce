@@ -1,6 +1,9 @@
 const web ={
     app:(req, res)=>{
         res.render('home');
+    },
+    app:(req, res)=>{
+        res.render('checkout');
     }
     // login: (req, res) => {
     //     res.render('login');
