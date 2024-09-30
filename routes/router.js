@@ -9,4 +9,5 @@ router.get('/contact', dev.contact);
 router.get('/about', dev.about); 
 router.get('/news', dev.news); 
 router.get('/shop', dev.shop); 
+
 module.exports = router;
