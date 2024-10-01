@@ -5,6 +5,7 @@ const dev = require('../controller/devController');
 router.get('/', dev.app);
 router.get('/checkout', dev.checkout);
 router.get('/cart', dev.cart);
+router.post('/cart', dev.addToCart);
 router.get('/contact', dev.contact);
 router.get('/about', dev.about); 
 router.get('/news', dev.news); 

@@ -42,10 +42,15 @@
                         </div>
                         <h3><%= prn.name %></h3>
                         <p class="product-price"><span>Per Kg</span> ₱<%= prn.price %> </p>
-                        <form action="/cart" method="POST">
-                            <input type="hidden" name="productId" value="<%= prn.id %>"> <!-- Assuming `prn.id` is the product ID -->
-                            <button type="submit" class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
-                        </form>
+                        <div class="single-product-form">
+                            <form action="/cart" method="POST"> 
+                                <input type="hidden" name="productId" value="<%= prn.id %>"> <!-- Ensure this is the correct ID -->
+                                <input type="number" name="quantity" placeholder="0" min="1"> 
+                                <button type="submit" class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                            </form>
+                            <p><strong>Categories: </strong>Fruits, Organic</p>
+                        </div>
+                        
                         
                     </div>
                 </div>
