@@ -16,7 +16,13 @@ const web = {
         res.render('checkout');
     },
     cart: (req, res) => {
-        res.render('cart');
+        // Initialize cart if it doesn't exist
+        if (!req.session.cart) {
+            req.session.cart = []; // Or initialize with any default values
+        }
+
+        const cartItems = req.session.cart; // Retrieve cart items from session
+        res.render('cart', { cartItems }); // Pass cart items to the cart view
     },
     about: (req, res) => {
         res.render('about');

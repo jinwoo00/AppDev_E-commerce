@@ -38,29 +38,18 @@
                 <div class="col-lg-4 col-md-6 text-center <%= prn.category %>">
                     <div class="single-product-item">
                         <div class="product-image">
-                            <a href="/singleProduct"><img src="<%= prn.image %>" alt="<%= prn.name %>"></a>
+                            <a href="single-product.html"><img src="img/products/product-img-2.jpg" alt=""></a>
                         </div>
                         <h3><%= prn.name %></h3>
                         <p class="product-price"><span>Per Kg</span> ₱<%= prn.price %> </p>
-                        <a href="cart.html" class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+                        <form action="/cart" method="POST">
+                            <input type="hidden" name="productId" value="<%= prn.id %>"> <!-- Assuming `prn.id` is the product ID -->
+                            <button type="submit" class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                        </form>
+                        
                     </div>
                 </div>
             <% }) %>
-        </div>
-
-        <!-- Pagination (optional) -->
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <div class="pagination-wrap">
-                    <ul>
-                        <li><a href="#">Prev</a></li>
-                        <li><a href="#">1</a></li>
-                        <li><a class="active" href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#">Next</a></li>
-                    </ul>
-                </div>
-            </div>
         </div>
     </div>
 </div>
