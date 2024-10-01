@@ -1,3 +1,5 @@
+const product = require('../model/ProductModel');
+
 const web ={
     app:(req, res)=>{
         res.render('home');
