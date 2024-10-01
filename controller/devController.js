@@ -1,26 +1,35 @@
-const product = require('../model/ProductModel');
-
-const web ={
-    app:(req, res)=>{
-        res.render('home');
+const products = require('../model/ProductModel');
+const web = {
+    app: (req, res) => {
+        products.getAll((err, result) => {
+            if (err) throw err;
+            res.render('home', { products: result });
+        });
     },
-    checkout:(req, res)=>{
+    shop: (req, res) => {
+        products.getAll((err, result) => {
+            if (err) throw err;
+            res.render('shop', { product: result }); // Passing product data to shop.ejs
+        });
+    },
+    checkout: (req, res) => {
         res.render('checkout');
     },
-    cart:(req, res)=>{
+    cart: (req, res) => {
         res.render('cart');
     },
-    about:(req, res)=>{
+    about: (req, res) => {
         res.render('about');
     },
-    contact:(req, res)=>{
+    contact: (req, res) => {
         res.render('contact');
     },
-    news:(req, res)=>{
+    news: (req, res) => {
         res.render('news');
     },
-    shop:(req, res)=>{
-        res.render('shop');
-    }
-};    
+    singleProduct: (req, res) => {
+        res.render('singleProduct');
+    },
+};
+
 module.exports = web;
