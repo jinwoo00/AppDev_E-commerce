@@ -11,5 +11,6 @@ router.get('/about', dev.about);
 router.get('/news', dev.news); 
 router.get('/shop', dev.shop); 
 router.get('/singleProduct', dev.singleProduct); 
+router.get('/singlenews', dev.singlenews); 
 
 module.exports = router;
