@@ -78,6 +78,10 @@ const web = {
     singleProduct: (req, res) => {
         res.render('singleProduct');
     },
+    singlenews: (req, res) => {
+        res.render('singlenews');
+    },
+    
 };
 
 module.exports = web;
