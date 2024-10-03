@@ -15,13 +15,6 @@ const web = {
     checkout: (req, res) => {
         res.render('checkout');
     },
-    cart: (req, res) => {
-        if (!req.session.cart) {
-            req.session.cart = [];
-        }
-        const cartItems = req.session.cart; 
-        res.render('cart', { cartItems });
-    },
     addToCart: (req, res) => {
         const productId = req.body.productId;
         const quantity = req.body.quantity || 1;
@@ -80,6 +73,12 @@ const web = {
     },
     singlenews: (req, res) => {
         res.render('singlenews');
+    },
+    cart: (req, res) => {
+        res.render('cart');
+    },
+    home2: (req, res) => {
+        res.render('home2');
     },
     
 };
