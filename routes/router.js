@@ -5,6 +5,7 @@ const dev = require('../controller/devController');
 
 router.get('/', dev.app);
 router.get('/login', dev.login);
+router.get('/register', dev.register);
 router.post('/login', dev.handleLogin);
 router.get('/checkout', dev.checkout);
 router.get('/cart', dev.cart);

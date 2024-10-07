@@ -1,10 +1,7 @@
 const products = require('../model/ProductModel');
 const web = {
     app: (req, res) => {
-        products.getAll((err, result) => {
-            if (err) throw err;
-            res.render('home', { products: result });
-        });
+        res.render('home', { user: req.session.user }); // Render home and pass user session data
     },
     shop: (req, res) => {
         products.getAll((err, result) => {
@@ -67,6 +64,9 @@ const web = {
         // No authentication, just redirect to the home page
         res.redirect('/');
     },
+    register: (req, res) => {
+        res.render('register');
+    },
 
     about: (req, res) => {
         res.render('about');
@@ -89,6 +89,7 @@ const web = {
     home2: (req, res) => {
         res.render('home2');
     },
+    
 };
 
 module.exports = web;
