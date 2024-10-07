@@ -1,7 +1,6 @@
 const bodyParser = require('body-parser');
 const express = require('express');
 const routes = require('./routes/router');
-const adminRouter = require('./routes/adminrouter');
 const app =express();
 const session = require('express-session');
 
@@ -10,7 +9,6 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.use('/', routes);
 app.use(express.static('public'));
 
-app.use('/admin', adminRouter);
 
 app.use(session({
     secret: 'your_secret_key',
